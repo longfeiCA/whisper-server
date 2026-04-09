@@ -1,4 +1,4 @@
-# Whisper model files - downloaded automatically by openai-whisper
+# Model cache files - downloaded automatically by faster-whisper (CTranslate2)
 models/
 
 # Python

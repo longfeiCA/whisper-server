@@ -8,11 +8,11 @@ services:
     ports:
       - "0.0.0.0:8081:8000"
     volumes:
-      - ./models:/root/.cache/whisper
+      - ./models:/root/.cache/huggingface
     environment:
       - PYTHONUNBUFFERED=1
     healthcheck:
-      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8000/health"]
+      test: ["CMD", "wget", "-q", "--method=GET", "-O", "/dev/null", "http://localhost:8000/health"]
       interval: 30s
       timeout: 10s
       retries: 3
